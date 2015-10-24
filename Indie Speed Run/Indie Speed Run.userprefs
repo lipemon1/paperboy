@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\JogaJornal.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MoveCenario.cs">
     <Files>
-      <File FileName="Assets\Scripts\DragAndTrow.cs" Line="28" Column="32" />
-      <File FileName="Assets\Scripts\JogaJornal.cs" Line="24" Column="23" />
+      <File FileName="Assets\Scripts\MoveCenario.cs" Line="37" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

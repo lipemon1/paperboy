@@ -2,9 +2,19 @@
 using System.Collections;
 
 public class MoveCenario : MonoBehaviour {
+	[System.Serializable]
+	public class Lote{
+		public GameObject casa;
+		public GameObject parede;
+		public GameObject telhado;
+	}
+	public Lote[] lote;
+	public Material[] corParede;
+	public Material[] corTelhado;
 	public float velocidade = 1;
 	public Transform emFrente;
-	public GameObject[] casa;
+
+
 	// Use this for initialization
 	void Start () {
 		ResetarCenario();
@@ -21,12 +31,15 @@ public class MoveCenario : MonoBehaviour {
 	}
 
 	void ResetarCenario() {
-		int safe = Random.Range(0, casa.Length);
-		for(int i = 0; i < casa.Length; i++){
+		int safe = Random.Range(0, lote.Length);
+		for(int i = 0; i < lote.Length; i++){
 			if(i != safe)
-				casa[i].SetActive(false);
-			else
-				casa[i].SetActive(true);
+				lote[i].casa.SetActive(false);
+			else{
+				lote[i].casa.SetActive(true);
+				lote[i].parede.GetComponent<MeshRenderer>().material = corParede[Random.Range(0, corParede.Length)];
+				lote[i].telhado.GetComponent<MeshRenderer>().material = corTelhado[Random.Range(0, corTelhado.Length)];
+			}
 		}
 	}
 
